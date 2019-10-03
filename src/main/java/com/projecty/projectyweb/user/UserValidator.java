@@ -17,7 +17,8 @@ public class UserValidator implements Validator {
     public boolean supports(Class<?> clazz) {
         return User.class.equals(clazz);
     }
-
+    
+    // validation for user input user name, password and password validation
     @Override
     public void validate(Object target, Errors errors) {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.empty.user.username");
